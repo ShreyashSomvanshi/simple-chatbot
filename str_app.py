@@ -28,7 +28,10 @@ def response_generator():
 
 st.title("🤖 | CHATBOT ")
 
-st.warning("Note: This chatbot is currently under development and may not operate as intended.",icon="⚠️")
+# st.warning("Note: This chatbot is currently under development and may not operate as intended.",icon="⚠️")
+message = st.chat_message("assistant")
+lst = ["Hi, How may I help you? | ⚠️ Note: This chatbot is currently under development and may not operate as intended."]
+message.write_stream(lst)
 
 # Initialize chat history
 if "messages" not in st.session_state:
